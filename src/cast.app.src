@@ -1,0 +1,16 @@
+{application, cast,
+ [
+  {description, "Library for type casting"},
+  {vsn, "0.1.0" },
+  {registered, [] },
+  {applications,
+  [
+    kernel,
+    stdlib
+  ]},
+  {env,[] },
+  {modules, [] },
+  {maintainers, ["Pawel Dudzinski"] },
+  {licenses, ["GNU GENERAL PUBLIC LICENSE"]},
+  {links, [{"GitHub", "https://github.com/paweldudzinski/cast"}]}
+ ]}.
