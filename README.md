@@ -1,5 +1,5 @@
-Cast - convert values to any erlang type from any erlang type (if possilbe ;))
-==============================================================================
+Cast - convert values to any erlang type from any erlang type
+=============================================================
 
 [![Build Status](https://travis-ci.com/paweldudzinski/cast.svg?branch=master)](https://travis-ci.com/paweldudzinski/cast)
 [![Erlang Versions][erlang versions badge]][erlang]
