@@ -3,7 +3,6 @@ Cast - convert values to any erlang type from any erlang type
 
 [![Build Status](https://travis-ci.com/paweldudzinski/cast.svg?branch=master)](https://travis-ci.com/paweldudzinski/cast)
 ![Language](https://img.shields.io/badge/language-erlang-yellowgreen.svg)
-[![Erlang Versions][erlang versions badge]][erlang]
 [![License](https://img.shields.io/badge/License-Apache%202.0-9cf.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Latest Release][release badge]][release]
 [![Last Commit][commit badge]][commit]
@@ -34,5 +33,4 @@ cast:string(Val)
 
 <!-- Badges (alphabetically) -->
 [commit badge]: https://img.shields.io/github/last-commit/paweldudzinski/cast.svg
-[erlang versions badge]: https://img.shields.io/badge/erlang-18.0%20to%2021.3-orange.svg
 [release badge]: https://img.shields.io/github/release/paweldudzinski/cast.svg
