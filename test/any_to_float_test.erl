@@ -12,6 +12,7 @@ integer_to_float_test() ->
     ?assertEqual(?F(-7), {ok, -7.0}).
 
 binary_to_float_test() ->
+    ?assertEqual(?F(<<"13.4">>), {ok, 13.4}),
     ?assertEqual(?F(<<"3">>), {ok, 3.0}),
     ?assertEqual(?F(<<"-3">>), {ok, -3.0}).
 
