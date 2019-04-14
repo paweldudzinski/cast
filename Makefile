@@ -3,7 +3,7 @@ PROJECT := cast
 ERL := erl
 EPATH = -pa _build/default/lib/cast/ebin
 
-.PHONY: all compile configure console deps doc test
+.PHONY: all compile configure console deps test
 
 all: deps compile
 
