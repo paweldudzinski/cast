@@ -3,7 +3,7 @@ Cast - convert values to any erlang type from any erlang type
 
 [![Build Status](https://travis-ci.com/paweldudzinski/cast.svg?branch=master)](https://travis-ci.com/paweldudzinski/cast)
 ![Language](https://img.shields.io/badge/language-erlang-yellowgreen.svg)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Latest Release][release badge]][release]
 [![Last Commit][commit badge]][commit]
 
