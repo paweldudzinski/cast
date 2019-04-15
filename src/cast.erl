@@ -9,30 +9,32 @@
         list/1,
         string/1]).
 
--spec integer(any()) -> integer().
+-type error() :: {error, cannot_cast}.
+
+-spec integer(any()) -> integer() | error().
 integer(Value) ->
     any_to_integer:convert(Value).
 
--spec float(any()) -> float().
+-spec float(any()) -> float() | error().
 float(Value) ->
     any_to_float:convert(Value).
 
--spec atom(any()) -> atom().
+-spec atom(any()) -> atom() | error().
 atom(Value) ->
     any_to_atom:convert(Value).
 
--spec binary(any()) -> binary().
+-spec binary(any()) -> binary() | error().
 binary(Value) ->
     any_to_binary:convert(Value).
 
--spec map(any()) -> map().
+-spec map(any()) -> map() | error().
 map(Value) ->
     any_to_map:convert(Value).
 
--spec list(any()) -> list().
+-spec list(any()) -> list() | error().
 list(Value) ->
     any_to_list:convert(Value).
 
--spec string(any()) -> string().
+-spec string(any()) -> string() | error().
 string(Value) ->
     any_to_string:convert(Value).
