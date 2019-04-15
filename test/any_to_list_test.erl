@@ -4,24 +4,24 @@
 -define(F(X), cast:list(X)).
 
 list_to_list_test() ->
-    ?assertEqual(?F([1,2,3]), {ok, [1,2,3]}).
+    ?assertEqual(?F([1,2,3]), [1,2,3]).
 
 integer_to_list_test() ->
-    ?assertEqual(?F(10), {ok, "10"}).
+    ?assertEqual(?F(10), "10").
 
 float_to_list_test() ->
-    ?assertEqual(?F(10.12), {ok, "10.12"}).
+    ?assertEqual(?F(10.12), "10.12").
 
 binary_to_list_test() ->
-    ?assertEqual(?F(<<"bin">>), {ok, "bin"}).
+    ?assertEqual(?F(<<"bin">>), "bin").
 
 atom_to_list_test() ->
-    ?assertEqual(?F(erlang), {ok, "erlang"}).
+    ?assertEqual(?F(erlang), "erlang").
 
 tuple_to_list_test() ->
     Tuple = {this, is, sparta},
-    ?assertEqual(?F(Tuple), {ok, [this, is, sparta]}).
+    ?assertEqual(?F(Tuple), [this, is, sparta]).
 
 map_to_list_test() ->
     Map = #{a => 1, b => 2},
-    ?assertEqual(?F(Map), {ok, [Map]}).
+    ?assertEqual(?F(Map), [Map]).

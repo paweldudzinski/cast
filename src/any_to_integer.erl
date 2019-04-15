@@ -3,13 +3,13 @@
 -export([convert/1]).
 
 convert(Value) when is_integer(Value) ->
-    {ok, Value};
+    Value;
 convert(Value) when is_float(Value) ->
     List = float_to_list(Value, [{decimals, 0}]),
-    {ok, list_to_integer(List)};
+    list_to_integer(List);
 convert(Value) when is_binary(Value) ->
     try binary_to_integer(Value) of
-        Integer -> {ok, Integer}
+        Integer -> Integer
     catch
         error:_ -> {error, cannot_cast}
     end;
@@ -20,7 +20,7 @@ convert(Value) when is_list(Value) ->
         error:_ -> Value
     end,
     try list_to_integer(TryFloatFirst) of
-        Integer -> {ok, Integer}
+        Integer -> Integer
     catch
         error:_ -> {error, cannot_cast}
     end;

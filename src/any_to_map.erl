@@ -3,12 +3,12 @@
 -export([convert/1]).
 
 convert(Value) when is_map(Value) ->
-    {ok, Value};
+    Value;
 convert(Value) when is_tuple(Value) ->
-    {ok, maps:from_list([Value])};
+    maps:from_list([Value]);
 convert(Value) when is_list(Value) ->
     try maps:from_list(Value) of
-        Map -> {ok, Map}
+        Map -> Map
     catch
         error:_ -> {error, cannot_cast}
     end;

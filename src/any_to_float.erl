@@ -3,19 +3,19 @@
 -export([convert/1]).
 
 convert(Value) when is_float(Value) ->
-    {ok, Value};
+    Value;
 convert(Value) when is_integer(Value) ->
     List = integer_to_list(Value),
-    {ok, list_to_float(List ++ ".0")};
+    list_to_float(List ++ ".0");
 convert(Value) when is_binary(Value) ->
     case cast:integer(Value) of
-        {ok, Integer} -> convert(Integer);
         {error, cannot_cast} ->
             try binary_to_float(Value) of
-                Integer -> {ok, Integer}
+                Integer -> Integer
             catch
                 error:_ -> {error, cannot_cast}
-            end
+            end;
+        Integer -> convert(Integer)
     end;
 convert(Value) when is_list(Value) ->
     TryIntFirst = try list_to_integer(Value) of
@@ -24,7 +24,7 @@ convert(Value) when is_list(Value) ->
         error:_ -> Value
     end,
     try list_to_float(TryIntFirst) of
-        Float -> {ok, Float}
+        Float -> Float
     catch
         error:_ -> {error, cannot_cast}
     end;

@@ -5,15 +5,15 @@
 
 map_to_map_test() ->
     Map = maps:put(test, 1, maps:new()),
-    ?assertEqual(cast:map(Map), {ok, #{test => 1}}).
+    ?assertEqual(cast:map(Map), #{test => 1}).
 
 tuple_to_map_test() ->
     Tuple = [{test, me}, {right, now}],
-    ?assertEqual(cast:map(Tuple), {ok, #{test => me, right => now}}).
+    ?assertEqual(cast:map(Tuple), #{test => me, right => now}).
 
 list_to_map_test() ->
     Proplist = [{test, me}, {right, now}],
-    ?assertEqual(cast:map(Proplist), {ok, #{test => me, right => now}}).
+    ?assertEqual(cast:map(Proplist), #{test => me, right => now}).
 
 other_to_map_test() ->
     ?assertEqual(cast:map(1), {error, cannot_cast}),
