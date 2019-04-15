@@ -1,7 +1,7 @@
 {application, cast,
  [
   {description, "Library for type casting"},
-  {vsn, "0.1.0" },
+  {vsn, "1.0" },
   {registered, [] },
   {applications,
   [
